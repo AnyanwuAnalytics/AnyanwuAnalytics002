@@ -1,8 +1,11 @@
 Data source: Kaggle (https://www.kaggle.com/datasets/prasad22/healthcare-dataset)
 
 DATA STORY
+
 This dataset belongs to the healthcare industry. The hospital's "products" are treatments, like asthma care or cancer treatment, and its "customers" are patients who arrive in very different states of urgency. Each row is one admission, so the same patient name can appear more than once. The data covers 8 May 2019 to 7 May 2024, which is exactly five years, so 2019 and 2024 are part years. It has 6 medical conditions (Arthritis, Diabetes, Hypertension, Obesity, Cancer and Asthma), 3 admission types (Elective, Urgent and Emergency), patients aged 13 to 89, and stays of 1 to 30 days. 
+
 DATA CLEANING PROCESS
+
 I kept an untouched copy of the raw data on a sheet called "Before" and cleaned a copy of it. I started with 55,500 rows and ended with 54,860.
 1. I fixed the capital letters in 55,467 patient names (names like "LesLie TErRy" became "Leslie Terry").
 2. I found and removed 534 rows that were duplicate values.
@@ -13,6 +16,7 @@ I kept an untouched copy of the raw data on a sheet called "Before" and cleaned 
 There are 17 columns in this dataset: 15 that came with the original data and two I appended. - Name, Age, Gender, Blood Type, Medical Condition, Date of Admission, Discharge Date, Admission Type, Room Number, Doctor, Hospital, Insurance Provider, Billing Amount, Medication, Test Results, Length of Stay, and Cost per Day.
 
 PRE ANALYSIS BOARD
+
 Before touching the data, I built a board to plan the analysis. 
 I split the data into: 
  Independent variables (what I group or filter by): Name, Age, Gender, Blood Type, Medical Condition, Date of Admission, Doctor, Hospital, Insurance Provider, Room Number and Admission Type. 
@@ -28,6 +32,7 @@ What success means to the industry:
 For the healthcare industry, success means patients get clear test results, recover and leave at a sensible pace so beds stay free, and are billed fairly for the care they receive, whether it is Emergency or Elective.
 
 IN ANALYSIS
+
 Each of the eight planned analyses became a PivotTable, then a chart. From each chart I wrote an observation (what the numbers show) and an insight (what it means). 
 
 
@@ -103,6 +108,7 @@ Observation: Omar Cruz ($50,654), David Cuevas ($50,651), John Walters ($50,615)
 Insight: these five doctors treated only 7 admissions in total, and every one was a 1-day stay billed at about $50K. That's a handful of cases, not a pattern. There are over 40,000 doctor names in the data and 77% of them have a single admission, so any ranking by cost per day will be topped by one-day stays with big bills.
 
 POST ANALYSIS
+
 After building the dashboard, three cards sit at the top: Total Billing ($1.404 Billion), Highest Average Billing by condition (Obesity) and Peak Billing Month (August). Seven of the eight charts sit underneath, and I introduced 2 slicers so anyone can filter by condition and month.
 What the dashboard says:
 1. The bill doesn't move with the stay, so cost per day is just division. The link between the size of a bill and the length of stay is zero (-0.005). The stays are spread evenly from 1 to 30 days, so about 10% of all admissions are 1 to 3 days and about 10% are 28 to 30 days. Because the bill stays at about $25.6K, cost per day falls as the stay gets longer ($15,531 for 1 to 3 days down to $877 for 28 to 30 days). That is a 94% drop caused by dividing the same bill by more days. The same trap shows up in the overall average. If you average the cost per day column, you get $3,399, but the middle admission has a cost per day of $1,653. Short stays with big cost per day numbers pull the average up. Across all 850,265 patient days in the data, the hospital billed $1,651 a day. 
@@ -113,6 +119,7 @@ What the dashboard says:
 6. The doctor ranking is built on almost nothing. The top five doctors by cost per day treated 7 admissions in total, all 1-day stays billed at about $50K, out of 54,860 admissions. The data has 40,276 different doctor names and 77% of them appear only once. A ranking that puts a one-admission doctor first is telling us about one bill, not about the doctor.
 
 OVERALL RECOMMENDATION
+
 Based on what the data shows, here is what I would suggest to each group.
 For hospital administrators,
 •	They should track the total bill per stay, not just cost per day. The bill is about the same whether a patient stays 2 days or 30, so cost per day only falls because it is divided by more days. A cost target built on cost per day would point you at the wrong problem.
@@ -126,6 +133,7 @@ For the finance team,
 •	They should record the cost of care as well as the bill. With billing alone, nobody can say what a stay costs the hospital or whether it is financially healthy. 
 
 CONCLUSION 
+
 This analysis of 54,860 hospital admissions shows that a patient's bill stays at about $25.6K no matter how long they stay, that all six conditions bill within 2.6% of each other, that about a third of test results are Inconclusive for every age group and condition, and that doctor rankings built on one or two patients tell us very little. The data looks computer-generated and holds five years of billing with no cost or outcome information, so these patterns may not hold in a real hospital. Cleaning the data before analyzing it mattered, because removing 534 duplicates and 106 negative bills moved the peak month from July to August.
 
 
