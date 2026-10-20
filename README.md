@@ -19,16 +19,26 @@ PRE ANALYSIS BOARD
 
 Before touching the data, I built a board to plan the analysis. 
 I split the data into: 
+
  Independent variables (what I group or filter by): Name, Age, Gender, Blood Type, Medical Condition, Date of Admission, Doctor, Hospital, Insurance Provider, Room Number and Admission Type. 
+ 
 Dependent variables (what I measure or what comes out): Billing Amount, Discharge Date, Medication, Test Results, Length of Stay and Cost per Day. 
+
 Industry type 
+
 Healthcare administration and services. It is a service business where care has to be accurate, fast and fairly billed. 
 Who the stakeholders are and what they want:
+
 •	Patients want accurate test results and a short stay. 
+
 •	Doctors and hospitals want good outcomes and efficient care.
+
 •	Insurance providers (Blue Cross, Medicare, Aetna, Cigna and UnitedHealthcare) watch billing and admission type to manage their risk.
+
 •	Hospital administrators watch cost per day and room availability to keep the hospital running.
+
 What success means to the industry: 
+
 For the healthcare industry, success means patients get clear test results, recover and leave at a sensible pace so beds stay free, and are billed fairly for the care they receive, whether it is Emergency or Elective.
 
 IN ANALYSIS
@@ -137,16 +147,24 @@ OVERALL RECOMMENDATION
 Based on what the data shows, here is what I would suggest to each group.
 
 For hospital administrators,
+
 •	They should track the total bill per stay, not just cost per day. The bill is about the same whether a patient stays 2 days or 30, so cost per day only falls because it is divided by more days. A cost target built on cost per day would point you at the wrong problem.
+
 •	They should plan staffing and beds using admissions per day, not monthly billing. August is the top month, but July is only $155K behind it, and admissions stay at about 30 a day in every month. This data shows no clear busy season.
+
 •	They should set a minimum number of admissions (for example 5) before ranking doctors on cost per day. The top five doctors treated only 7 admissions in total. For doctors and clinical leaders
+
 •	They should look at why about 1 in 3 test results is Inconclusive, and track how these leads to re-testing and longer stays. Hypertension has the highest Inconclusive rate (33.51%), so it is a place to start.
+
 •	They should treat the difference between conditions with care. Every condition is within about 1.5 points of a third, so I would not change any testing process based on this alone.
 
+
 For insurance providers,
+
 •	They should ask for itemized claims before reviewing rates. Bills are almost the same across conditions (within 2.6%), age groups, admission types and lengths of stay, so the bill does not seem to reflect how much care a patient received.
 
 For the finance team,
+
 •	They should record the cost of care as well as the bill. With billing alone, nobody can say what a stay costs the hospital or whether it is financially healthy. 
 
 CONCLUSION 
